@@ -1,0 +1,69 @@
+.md-todo {
+    @media only screen and (max-width: 767px) {
+        width: 100%;
+
+        ul {
+            width: 100%;
+            padding: 0;
+        }
+    }
+
+    &__item {
+        width: 50%;
+        height: 60px;
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: white;
+        color: black;
+        position: relative;
+        padding: 6px 12px;
+        margin: 20px auto;
+
+        @media only screen and (max-width: 767px) {
+            width: 100%;
+            margin: 20px auto;
+        }
+
+        &:first-child {
+            margin-top: 0;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+
+        &.completed {
+            background: rgba(white, 0.8);
+            color: gray;
+            text-decoration: line-through;
+        }
+
+        button {
+            width: 50px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: auto;
+            right: 50px;
+            border: 0;
+            background: rgb(16, 219, 16);
+            color: white;
+            transition: ease background 0.1s;
+            cursor: pointer;
+
+            &:hover {
+                background: rgb(12, 180, 12);
+            }
+
+            &:last-child {
+                background: rgb(219, 30, 16);
+                right: 0;
+
+                &:hover {
+                    background: rgb(177, 23, 12);
+                }
+            }
+        }
+    }
+}
